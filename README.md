@@ -1,1 +1,3 @@
-"# admitad" 
+/wp-admin
+admin
+Admin098

@@ -1,0 +1,36 @@
+/*
+Theme Name: Understrap Child
+Template: understrap
+*/
+
+.real__item {
+   display: block;
+   color: #000;
+   text-decoration: none;
+   margin-bottom: 30px;
+}
+
+.real__item:hover {
+   color: #000;
+   text-decoration: none;
+}
+
+.real__item img.wp-post-image {
+   height: 200px;
+   width: 100%;
+   object-fit: cover;
+   margin-bottom: 10px;
+}
+
+.form_add_real label {
+   display: block;
+}
+
+.form_add_real p {
+   margin-bottom: 0;
+}
+
+.form_add_real input,
+.form_add_real select {
+   width: 100%;
+}
