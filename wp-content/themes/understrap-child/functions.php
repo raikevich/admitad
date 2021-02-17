@@ -37,6 +37,11 @@ function add_real() {
 
       wp_set_post_terms($post_id, array( intval($_POST['type']) ), 'real-type');
 
+      if ( isset($_FILES['image']) ) {
+         $attach_id = media_handle_upload( 'image', $post_id );
+         set_post_thumbnail( $post_id, $attach_id );
+      }
+
       update_field('address', $_POST['address'], $post_id);
       update_field('cost', $_POST['cost'], $post_id);
       update_field('floor', $_POST['floor'], $post_id);
@@ -76,7 +81,7 @@ function echo_real( $id, $show_city = true ) { ?>
             $prop_name = get_field_object($prop, $id)['label'];
 
             if ( $prop == 'city' ) {
-               if($show_city) {
+               if ( $show_city ) {
                   $prop_value = get_field($prop, $id);
                   $prop_value = $prop_value->post_title;
                } else {

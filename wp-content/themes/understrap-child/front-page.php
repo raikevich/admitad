@@ -13,7 +13,7 @@
 
          foreach ( $reals as $real ) { ?>
             <div class="col-12 col-md-4">
-               <?php echo_real( $real->ID ) ?>
+               <?php echo_real($real->ID) ?>
             </div>
          <?php } ?>
       </div>
@@ -66,7 +66,7 @@
                <select name="type">
                   <?php
                   $real_type = get_terms(array(
-                      'taxonomy'=>'real-type'
+                      'taxonomy' => 'real-type'
                   ));
 
                   foreach ( $real_type as $type ) { ?>
@@ -108,6 +108,10 @@
                      <option value="<?php echo $city->ID; ?>"><?php echo $city->post_title; ?></option>
                   <?php } ?>
                </select>
+            </label>
+            <label>
+               <p>Изображение</p>
+               <input type="file" accept="image/jpeg,image/png" name="image">
             </label>
          </div>
          <div class="col-12 text-center">
